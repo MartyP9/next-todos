@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { Suspense } from 'react'
+import TodosList from './(user)/todos/TodosList'
 
-function HomePage() {
+function Home() {
   return (
-    <div className='text-red-500'>Welcome Home</div>
+    <div>
+      <p className='my-5 text-blue-800'>Click buttons above to navigate to other demo features using Next.JS 13</p>
+      <h1 className='mb-5 text-blue-800'>Suspense demo test below</h1>
+      <Suspense fallback={<p>loading the todos...</p>}>
+        <div className="flex space-x-2"><TodosList /></div>
+      </Suspense>
+
+      <Suspense fallback={<p>loading the shopping cart...</p>}>
+        <div className="flex space-x-2"><TodosList /></div>
+      </Suspense>
+    </div>
   )
 }
 
-export default HomePage
+export default Home

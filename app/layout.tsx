@@ -19,7 +19,7 @@ export default function RootLayout({
       <head>
         <title>Peter's Website</title>
       </head>
-      <body>
+      <body >
         <Header/>
         {children}
       </body>

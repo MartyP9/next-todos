@@ -32,7 +32,7 @@ async function SearchResults({params: {searchTerm} }:PageProps) {
 
   return (
     <div>
-        <p className="text-sm text-gray-500"></p>
+        <p className="text-sm text-gray-500">{`You searched for: ${searchTerm.replace(/%20/g, ' ')}`}</p>
         <ol className="space-y-5 p-5">
             {searchResults.organic_results.map((result)=>(
                 <li key={result.position} className="list-decimal">
